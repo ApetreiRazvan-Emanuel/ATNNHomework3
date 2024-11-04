@@ -118,14 +118,23 @@ I've used both TensorBoard and WandB for logging. The complete training metrics 
 
 ## Conclusions
 
-The parameter sweep revealed that the combination of ResNet18, SGD with Nesterov momentum, and advanced data augmentation provides the best results on CIFAR-100. The key findings suggest that:
+The parameter sweep revealed several interesting and unexpected findings:
 
-1. Model architecture has less impact than training strategy
-2. Advanced data augmentation consistently improves performance
-3. SGD with proper momentum and learning rate outperforms AdamW for this task
+1. **Architecture Impact**: 
+   - PreActResNet18's architecture appears significantly better suited for CIFAR-100
+   - The custom implementation outperforms the timm ResNet18 model substantially
 
-Possible improvements I could've tried:
-- Longer training schedules
-- Cosine learning rate scheduling
-- Additional data augmentation techniques
-- Ensemble methods combining multiple models
+2. **Augmentation Strategy**:
+   - Simpler augmentation strategies proved more effective
+   - Complex augmentations (rotation, erasing) appear to hinder learning
+   - Future experiments should focus on finding the right balance of augmentation strength
+
+3. **Optimization Choices**:
+   - SGD with momentum remains a strong choice for both architectures
+   - The learning rate and optimization parameters might need further tuning for ResNet18
+
+Future improvements could explore:
+- Fine-tuning learning rates separately for each model
+modified the readme- Testing milder versions of the advanced augmentations
+- Investigating why ResNet18 underperforms relative to PreActResNet18
+- Experimenting with different learning rate schedules
