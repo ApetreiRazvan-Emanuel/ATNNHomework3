@@ -1,0 +1,53 @@
+{
+    "device": "cuda",
+    "dataset": "CIFAR100",
+    "gradient_accumulation_steps": 2,
+    "transform": {
+        "RandomCrop": {"size": 32, "padding": 4},
+        "RandomHorizontalFlip": null
+    },
+    "batch_size": {
+        "train": 128,
+        "test": 256
+    },
+    "shuffle": {
+        "train": true,
+        "test": false
+    },
+    "num_workers": 4,
+    "prefetch_factor": 2,
+    "model": {
+        "model_name": "resnet18_cifar100"
+    },
+    "optimizer": {
+        "type": "SGD",
+        "params": {
+            "lr": 0.001,
+            "momentum": 0.9,
+            "weight_decay": 0.001,
+            "nesterov": true
+        }
+    },
+    "scheduler": {
+        "type": "ReduceLROnPlateau",
+        "params": {
+            "mode": "max",
+            "factor": 0.2,
+            "patience": 10,
+            "threshold": 0.001,
+            "threshold_mode": "rel"
+        }
+    },
+    "loss": "CrossEntropyLoss",
+    "epochs": 150,
+    "early_stopping": {
+        "patience": 15,
+        "criterion": "loss"
+    },
+    "logging": {
+        "log_dir": "runs/cifar100_experiment"
+    },
+    "use_amp": true,
+    "use_tta": true,
+    "tta_repeats": 5
+}

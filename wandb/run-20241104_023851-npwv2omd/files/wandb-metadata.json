@@ -1,0 +1,43 @@
+{
+  "os": "Windows-10-10.0.19045-SP0",
+  "python": "3.12.4",
+  "startedAt": "2024-11-04T00:38:51.365354Z",
+  "args": [
+    "--sweep_id",
+    "43gxbc7e"
+  ],
+  "program": "C:\\Facultate\\Capitole Avansate de Retele Neuronale\\Projects\\Homework3\\sweep.py",
+  "codePath": "sweep.py",
+  "email": "apetreirazvane@gmail.com",
+  "root": "C:\\Facultate\\Capitole Avansate de Retele Neuronale\\Projects\\Homework3",
+  "host": "DESKTOP-VVURK4O",
+  "username": "Razvan",
+  "executable": "C:\\Users\\Razvan\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+  "codePathLocal": "sweep.py",
+  "cpu_count": 8,
+  "cpu_count_logical": 16,
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "511412744192",
+      "used": "407524573184"
+    }
+  },
+  "memory": {
+    "total": "17024741376"
+  },
+  "cpu": {
+    "count": 8,
+    "countLogical": 16
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+      "memoryTotal": "6442450944",
+      "cudaCores": 3840,
+      "architecture": "Ampere"
+    }
+  ],
+  "cudaVersion": "12.6"
+}

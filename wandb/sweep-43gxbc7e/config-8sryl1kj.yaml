@@ -1,0 +1,17 @@
+wandb_version: 1
+
+model:
+  value:
+    model_name: resnet18_cifar100
+optimizer:
+  value:
+    params:
+      lr: 0.001
+      weight_decay: 0.05
+    type: AdamW
+transform:
+  value:
+    RandomCrop:
+      padding: 4
+      size: 32
+    RandomHorizontalFlip: null

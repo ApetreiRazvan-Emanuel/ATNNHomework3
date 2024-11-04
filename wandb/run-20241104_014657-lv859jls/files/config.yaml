@@ -1,0 +1,53 @@
+_wandb:
+    value:
+        cli_version: 0.18.5
+        m: []
+        python_version: 3.12.4
+        t:
+            "1":
+                - 1
+                - 41
+                - 49
+                - 55
+                - 63
+            "2":
+                - 1
+                - 41
+                - 49
+                - 55
+                - 63
+            "3":
+                - 2
+                - 17
+                - 23
+                - 55
+            "4": 3.12.4
+            "5": 0.18.5
+            "8":
+                - 3
+                - 5
+            "10":
+                - 3
+            "12": 0.18.5
+            "13": windows-amd64
+model:
+    value:
+        model_name: PreActResNet18-CIFAR100
+optimizer:
+    value:
+        params:
+            lr: 0.1
+            momentum: 0.9
+            nesterov: true
+            weight_decay: 0.0005
+        type: SGD
+transform:
+    value:
+        RandomCrop:
+            padding: 4
+            size: 32
+        RandomErasing:
+            p: 0.5
+        RandomHorizontalFlip: null
+        RandomRotation:
+            degrees: 15

@@ -1,0 +1,23 @@
+wandb_version: 1
+
+model:
+  value:
+    model_name: PreActResNet18-CIFAR100
+optimizer:
+  value:
+    params:
+      lr: 0.1
+      momentum: 0.9
+      nesterov: true
+      weight_decay: 0.0005
+    type: SGD
+transform:
+  value:
+    RandomCrop:
+      padding: 4
+      size: 32
+    RandomErasing:
+      p: 0.5
+    RandomHorizontalFlip: null
+    RandomRotation:
+      degrees: 15
